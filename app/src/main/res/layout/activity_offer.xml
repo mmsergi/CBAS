@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sergi.crowdbuy.OfferActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clases de guitarra"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Barcelona"
+        tools:layout_editor_absoluteX="284dp"
+        tools:layout_editor_absoluteY="130dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="254dp"
+        android:layout_height="87dp"
+        android:text="Busco 3 personas en Barcelona que quieran hacer clases de guitarra desde nivel cero, de manera que podamos conseguir un precio más barato"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/textView5"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.532"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="313dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/softGreen"
+        android:text="Participar"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintLeft_toLeftOf="@+id/textView6"
+        app:layout_constraintRight_toRightOf="@+id/textView6"
+        tools:layout_editor_absoluteY="377dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Personas participando en la oferta: 3"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID: 376"
+        android:textAlignment="textEnd"
+        tools:layout_editor_absoluteX="300dp"
+        tools:layout_editor_absoluteY="16dp" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "630630003120",
+    "firebase_url": "https://crowdbuying-d2667.firebaseio.com",
+    "project_id": "crowdbuying-d2667",
+    "storage_bucket": "crowdbuying-d2667.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630630003120:android:ef6154940b320b72",
+        "android_client_info": {
+          "package_name": "sergi.crowdbuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630630003120-lkt45nvl75u9rduh2n5qh66skkldu43m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sergi.crowdbuy",
+            "certificate_hash": "2ba74ca761873102cbe4d81aa490eb938bcfd4cb"
+          }
+        },
+        {
+          "client_id": "630630003120-kp4ne6jiiv8vccsqulc7706crot41qds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC76j_twEfyrUUuJCL1nnU95pOY678A7os"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630630003120-kp4ne6jiiv8vccsqulc7706crot41qds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
