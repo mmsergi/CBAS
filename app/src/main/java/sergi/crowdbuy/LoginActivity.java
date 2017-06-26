@@ -1,5 +1,6 @@
 package sergi.crowdbuy;
 
+import android.app.*;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -38,8 +39,13 @@ public class LoginActivity extends AppCompatActivity {
                 if (user != null) {
                     // User is signed in
                     Log.d("Firebase", "onAuthStateChanged:signed_in:" + user.getUid());
-                    Toast.makeText(LoginActivity.this, "LOGGED IN!", Toast.LENGTH_SHORT).show();
 
+                    Crowdbuy.uid = user.getUid();
+                    Crowdbuy.email = user.getEmail();
+
+                    Toast.makeText(LoginActivity.this, "Logged in!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
                 } else {
                     // User is signed out
                     Log.d("Firebase", "onAuthStateChanged:signed_out");
@@ -74,12 +80,10 @@ public class LoginActivity extends AppCompatActivity {
                             Log.w("Firebase", "signInWithEmail:failed", task.getException());
                             Toast.makeText(LoginActivity.this, "Auth failed", Toast.LENGTH_SHORT).show();
                         } else if (task.isSuccessful()){
-                            Intent intent = new Intent(LoginActivity.this, NewOfferActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             intent.putExtra("email", user);
                             startActivity(intent);
                         }
-
-                        // ...
                     }
                 });
     }
@@ -99,10 +103,8 @@ public class LoginActivity extends AppCompatActivity {
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, "Auth failed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Registered!", Toast.LENGTH_SHORT).show();
                         }
-
-                        // ...
                     }
                 });
     }

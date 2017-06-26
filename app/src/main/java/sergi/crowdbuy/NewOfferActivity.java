@@ -1,15 +1,15 @@
 package sergi.crowdbuy;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.firebase.geofire.GeoFire;
+import com.firebase.geofire.GeoLocation;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -27,21 +27,11 @@ public class NewOfferActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_offer);
 
-        TextView welcometext = (TextView) findViewById(R.id.welcometext);
-
-        Intent intent = getIntent();
-        String uid = intent.getStringExtra("uid");
-        String email = intent.getStringExtra("email");
-
-        welcometext.setText(uid + " " + email);
-
-        Button signOutBtn = (Button) findViewById(R.id.signoutBtn);
-
         mAuth = FirebaseAuth.getInstance();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+            public void onAuthStateChanged(FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
@@ -51,22 +41,25 @@ public class NewOfferActivity extends AppCompatActivity {
                 } else {
                     // User is signed out
                     Log.d("Firebase", "onAuthStateChanged:signed_out");
-                    Intent intent = new Intent(NewOfferActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(NewOfferActivity.this, MainActivity.class);
                     startActivity(intent);
 
                 }
-                // ...
             }
         };
 
     }
 
-
-    public void logOut(View view ){
-        mAuth.signOut();
+    public void onClick(View v ){
+        switch (v.getId()){
+            case R.id.sendBtn:
+                uploadNewOffer();
+            case R.id.closeBtn:
+                finish();
+        }
     }
 
-    public void sendText(View view){
+    public void uploadNewOffer(){
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
         EditText titleET = (EditText) findViewById(R.id.editTextTitle);
@@ -81,6 +74,12 @@ public class NewOfferActivity extends AppCompatActivity {
         myRef.child("minpeople").setValue(participantsET.getText().toString());
         myRef.child("estimated price").setValue(priceET.getText().toString());
         myRef.child("currency").setValue("€");
+
+        DatabaseReference geoRef = myRef.child("geo");
+        GeoFire geoFire = new GeoFire(geoRef);
+        geoFire.setLocation("firebase-hq", new GeoLocation(37.7853889, -122.4056973));
+
+
     }
 
     @Override

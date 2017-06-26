@@ -3,138 +3,30 @@
 
     <item
         is-multidex="true"
-        jar="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/gersoft/.android/build-cache/60849e040bd3bfe5e88b285e46f5b05a7bfc424b/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="453e6a8bd29cdf44e853d0da9bf8eaa6208e477b">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_db2e605a59e030249bf45253f5e7d6b8df363601/classes.dex" />
+        sha1="0255d2343d1370f39024fb111568a705b2eb49cd">
+        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_edad5635affe9e86af02660ceb96f74a8fa55d87/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bfbc0f8308a93c578a67b28d539f7d5a70e3cd1a/classes.dex" />
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_bce283ee10784bfcd9a96aea63f7b116f1d02140/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/b0bd6eb99f967ecbf15345480367e3ffc0ff0008/output/jars/classes.jar"
+        jar="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_762a12043781079af0965537eb265d7600a24f30/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/70fe04ad32962c2039d519951cf17fb9f8ae1216/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_816054e1d4276d0807147d62389a08b65c312577/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/4bf6167ff6c123d9c67d7f2889ba29258f5f433b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8b10029b4c09e5a17b1018826993c04dacc3f126/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/d9df4224ed5aaebea2d9a707b1d5a616655dbfe1/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a89d82c9193616124f83d3bcdff722b649ab3580/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/64000a304b7cf45bbaf33d5da3bee8df8c03659f/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b7f6dfca848d5c72c4b73b64ef049ee0178dc700/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/c30da577753f6909ecd89165147cecb13024b698/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_00c131c14b55e7ca4541f3d9075ba68645932df8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/79867588ee138d232af3aa537195731b087be20a/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ec38c0e55608135292229e7d447cb0aa77607dab/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/e1832eb01c367fc3c8ec40decd40338c4a4af664/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e96f04c6a90415dbfddb5d15444b9d49eb6a3c49/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/3a810ad1cd4d51ea6555d8740177de4d99e98641/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f8092273191487dcb20e81b1f9a854e41cec17f7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/b08ef3a82479a2471928d815d0a18126efe03f6b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a1f4b08a687b9fe881588cc8909bddffc1908d07/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/8bc21fe230523021980ca8d1132cfeecd78bfb8b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9561ab9da75a1986d8b4a8643f9bc64ae021d678/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_3b4232b42c9c3558709f47390e598d21b95e8e23/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/b88fcb8dad331f390a24cf4eff6249c5db3f5172/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/gersoft/Documents/Sergi/Crowdbuy/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d1d38658c7d1891ae6f9736a41a2f9437e65feb0/classes.dex" />
+        sha1="68589a74f906fb6032983dd1ecc92e9c90fbcb96">
+        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_38fb457a742d934d24282143311695d8b98306e5/classes.dex" />
     </item>
 
 </items>
