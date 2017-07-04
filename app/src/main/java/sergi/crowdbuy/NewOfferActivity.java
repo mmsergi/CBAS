@@ -67,18 +67,17 @@ public class NewOfferActivity extends AppCompatActivity {
         EditText participantsET = (EditText) findViewById(R.id.editTextParticipants);
         EditText priceET = (EditText) findViewById(R.id.editTextPrice);
 
-        DatabaseReference myRef = database.getReference("offers").child(Uid).push();
+        DatabaseReference ref = database.getReference("offers").push();
 
-        myRef.child("title").setValue(titleET.getText().toString());
-        myRef.child("description").setValue(descriptionET.getText().toString());
-        myRef.child("minpeople").setValue(participantsET.getText().toString());
-        myRef.child("estimated price").setValue(priceET.getText().toString());
-        myRef.child("currency").setValue("€");
+        ref.child("title").setValue(titleET.getText().toString());
+        ref.child("description").setValue(descriptionET.getText().toString());
+        ref.child("participants").setValue(participantsET.getText().toString());
+        ref.child("price").setValue(priceET.getText().toString());
+        ref.child("currency").setValue("€");
+        ref.child("user").setValue(Uid);
 
-        DatabaseReference geoRef = myRef.child("geo");
-        GeoFire geoFire = new GeoFire(geoRef);
-        geoFire.setLocation("firebase-hq", new GeoLocation(37.7853889, -122.4056973));
-
+        GeoFire geoFire = new GeoFire(ref);
+        geoFire.setLocation("geo", new GeoLocation(37.7853889, -122.4056973));
 
     }
 

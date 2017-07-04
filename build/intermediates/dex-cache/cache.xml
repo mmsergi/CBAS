@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="/Users/gersoft/.android/build-cache/a50abb49569e133ea3b0f1665fd4a01ae0b8ed3c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="be587097e648eabfb7f9eca23ab03369894e2d5d">
+        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fd0c809a2e3603100c0f62ac625a114b0ec1f5cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/gersoft/.android/build-cache/60849e040bd3bfe5e88b285e46f5b05a7bfc424b/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -25,8 +34,17 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="68589a74f906fb6032983dd1ecc92e9c90fbcb96">
+        sha1="0b677345d2747e803ab06f87b3ba3d73ad938bac">
         <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_38fb457a742d934d24282143311695d8b98306e5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/gersoft/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.6.0/48efa6f14074e1a6b16e02ac05eba3fc5c7c7ec8/butterknife-annotations-8.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="48efa6f14074e1a6b16e02ac05eba3fc5c7c7ec8">
+        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.6.0_01695689f8385ba23d6d3f43fbb6d7dabe177dea/classes.dex" />
     </item>
 
 </items>

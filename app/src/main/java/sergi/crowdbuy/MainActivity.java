@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,22 +17,33 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+
+import butterknife.ButterKnife;
+
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, FragmentOne.OnFragmentInteractionListener,
-        FragmentTwo.OnFragmentInteractionListener{
+        implements NavigationView.OnNavigationItemSelectedListener, OffersFragment.OnFragmentInteractionListener,
+        MyOffersFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        setTitle("Crowd Offers");
 
         if (savedInstanceState == null) {
             Fragment fragment = null;
             Class fragmentClass = null;
-            fragmentClass = FragmentOne.class;
+            fragmentClass = OffersFragment.class;
             try {
                 fragment = (Fragment) fragmentClass.newInstance();
             } catch (Exception e) {
@@ -46,8 +58,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
                 Intent intent = new Intent(MainActivity.this, NewOfferActivity.class);
                 startActivity(intent);
@@ -55,13 +66,16 @@ public class MainActivity extends AppCompatActivity
         });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TextView emailTextView = (TextView) navigationView.getHeaderView(0).findViewById(R.id.emailTextView);
+        emailTextView.setText(Crowdbuy.email);
+
     }
 
     @Override
@@ -70,7 +84,8 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            //super.onBackPressed();
+            Log.e("Button", "back");
         }
     }
 
@@ -90,6 +105,12 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            FirebaseAuth.getInstance().signOut();
+
+            Toast.makeText(this, "Signed out!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+
             return true;
         }
 
@@ -107,17 +128,17 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
-            fragmentClass = FragmentOne.class;
+            setTitle("Crowd Offers");
+            fragmentClass = OffersFragment.class;
         } else if (id == R.id.nav_gallery) {
-            fragmentClass = FragmentTwo.class;
+            setTitle("My Offers");
+            fragmentClass = MyOffersFragment.class;
         } else if (id == R.id.nav_slideshow) {
-            fragmentClass = FragmentTwo.class;
-        } else if (id == R.id.nav_manage) {
-            fragmentClass = FragmentTwo.class;
+            fragmentClass = MyOffersFragment.class;
         } else if (id == R.id.nav_share) {
-            fragmentClass = FragmentTwo.class;
+            fragmentClass = MyOffersFragment.class;
         } else if (id == R.id.nav_send) {
-            fragmentClass = FragmentTwo.class;
+            fragmentClass = MyOffersFragment.class;
         }
 
         try {
@@ -127,7 +148,6 @@ public class MainActivity extends AppCompatActivity
         }
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

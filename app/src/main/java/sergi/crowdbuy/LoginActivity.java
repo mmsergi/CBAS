@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,11 +18,17 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class LoginActivity extends AppCompatActivity {
 
     String user, password;
-    Button loginBtn, registerBtn;
-    EditText userET, passwordET;
+
+    @BindView(R.id.loginBtn) Button loginBtn;
+    @BindView(R.id.registerBtn) Button registerBtn;
+    @BindView(R.id.editTextEmail) EditText userET;
+    @BindView(R.id.editTextPassword) EditText passwordET;
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -30,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -53,12 +61,6 @@ public class LoginActivity extends AppCompatActivity {
                 // ...
             }
         };
-
-        loginBtn = (Button) findViewById(R.id.loginBtn);
-        registerBtn = (Button) findViewById(R.id.registerBtn);
-
-        userET = (EditText) findViewById(R.id.editTextEmail);
-        passwordET = (EditText) findViewById(R.id.editTextPassword);
 
     }
 
