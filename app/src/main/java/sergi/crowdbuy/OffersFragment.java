@@ -134,6 +134,8 @@ public class OffersFragment extends Fragment {
             //iterate through each user, ignoring their UID
             for (Map.Entry<String, Object> entry : users.entrySet()){
 
+                String key = entry.getKey().toString();
+
                 //Get user map
                 Map singleEntry = (Map) entry.getValue();
 
@@ -144,7 +146,7 @@ public class OffersFragment extends Fragment {
                 String currency = (String) singleEntry.get("currency");
 
                 Offer offer;
-                offer = new Offer(title, description, people, price, currency);
+                offer = new Offer(title, description, people, price, currency, key);
 
                 offersList.add(offer);
             }

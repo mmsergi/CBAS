@@ -119,6 +119,8 @@ public class MyOffersFragment extends Fragment {
 
                 for (DataSnapshot item:dataSnapshot.getChildren()) {
 
+                    String key = item.getKey().toString();
+
                     Map<String, Object> data = (Map<String, Object>) item.getValue();
 
                     String title = "", description = "", participants = "", price = "", currency = "";
@@ -129,9 +131,9 @@ public class MyOffersFragment extends Fragment {
                     if (data.containsKey("price")) price = (String) data.get("price");
                     if (data.containsKey("currency")) currency = (String) data.get("currency");
 
-                    Log.e("TITLE", title);
+                    Log.e("TEST", key);
 
-                    Offer offer = new Offer(title, description, participants, price, currency);
+                    Offer offer = new Offer(title, description, participants, price, currency, key);
                     myOffersList.add(offer);
                 }
 

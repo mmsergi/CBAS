@@ -8,18 +8,19 @@ import java.io.Serializable;
 
 public class Offer implements Serializable{
 
-    public String title, description, people, price, currency;
+    public String title, description, participants, price, currency, key;
 
     public Offer(){
 
     }
 
-    public Offer(String title, String description, String people, String price, String currency){
+    public Offer(String title, String description, String participants, String price, String currency, String key){
         this.title = title;
         this.description = description;
-        this.people = people;
+        this.participants = participants;
         this.price = price;
         this.currency = currency;
+        this.key = key;
     }
 
 }
