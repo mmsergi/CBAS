@@ -40,10 +40,13 @@ public class LoginActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         mAuth = FirebaseAuth.getInstance();
+
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
                 FirebaseUser user = firebaseAuth.getCurrentUser();
+
                 if (user != null) {
                     // User is signed in
                     Log.d("Firebase", "onAuthStateChanged:signed_in:" + user.getUid());
@@ -54,11 +57,11 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Logged in!", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
+
                 } else {
                     // User is signed out
                     Log.d("Firebase", "onAuthStateChanged:signed_out");
                 }
-                // ...
             }
         };
 
@@ -88,6 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 });
+
     }
 
     public void registerBtn(View v){
@@ -104,8 +108,10 @@ public class LoginActivity extends AppCompatActivity {
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
-                        if (!task.isSuccessful()) {
+                        if (task.isSuccessful()) {
                             Toast.makeText(LoginActivity.this, "Registered!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(LoginActivity.this, "Fail register!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

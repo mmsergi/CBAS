@@ -98,6 +98,13 @@ public class ChatActivity extends AppCompatActivity {
 
                 listViewAdapter.notifyDataSetChanged();
                 listView.setAdapter(listViewAdapter);
+                listView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Select the last row so it will scroll into view...
+                        listView.setSelection(listViewAdapter.getCount() - 1);
+                    }
+                });
             }
 
             @Override
