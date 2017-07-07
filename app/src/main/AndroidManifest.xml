@@ -24,7 +24,7 @@
         <activity android:name=".OfferActivity" />
         <activity android:name=".NewOfferActivity" />
         <activity android:name=".EditOfferActivity" />
-        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".ChatActivity" />
 
     </application>
 

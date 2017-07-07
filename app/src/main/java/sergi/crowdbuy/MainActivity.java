@@ -27,7 +27,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OffersFragment.OnFragmentInteractionListener,
-        MyOffersFragment.OnFragmentInteractionListener{
+        MyOffersFragment.OnFragmentInteractionListener, MyChatsFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,10 +58,10 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
 
                 Intent intent = new Intent(MainActivity.this, NewOfferActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -76,6 +76,14 @@ public class MainActivity extends AppCompatActivity
         TextView emailTextView = (TextView) navigationView.getHeaderView(0).findViewById(R.id.emailTextView);
         emailTextView.setText(Crowdbuy.email);
 
+    }
+
+    public void onClick(View v ){
+        switch (v.getId()){
+            case R.id.button:
+                Intent i = new Intent(this, ChatActivity.class);
+                startActivity(i);
+        }
     }
 
     @Override
@@ -134,7 +142,8 @@ public class MainActivity extends AppCompatActivity
             setTitle("My Offers");
             fragmentClass = MyOffersFragment.class;
         } else if (id == R.id.nav_slideshow) {
-            fragmentClass = MyOffersFragment.class;
+            setTitle("My Chats");
+            fragmentClass = MyChatsFragment.class;
         } else if (id == R.id.nav_share) {
             fragmentClass = MyOffersFragment.class;
         } else if (id == R.id.nav_send) {
