@@ -69,6 +69,7 @@ public class NewOfferActivity extends AppCompatActivity {
 
         DatabaseReference ref = database.getReference("offers").push();
 
+
         ref.child("title").setValue(titleET.getText().toString());
         ref.child("description").setValue(descriptionET.getText().toString());
         ref.child("participants").setValue(participantsET.getText().toString());
@@ -78,6 +79,10 @@ public class NewOfferActivity extends AppCompatActivity {
 
         GeoFire geoFire = new GeoFire(ref);
         geoFire.setLocation("geo", new GeoLocation(37.7853889, -122.4056973));
+
+        DatabaseReference ref2 = database.getReference("groups").child(ref.getKey());
+
+        ref2.child("members").child(Crowdbuy.email.replace(".","")).setValue(true);
 
     }
 

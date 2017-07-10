@@ -3,15 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/8b58964bf498cb865757f6eab1c70fa2f1d7000c/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_da1a73026475f0a70ac7be5d3e28b0b246c27889/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -21,119 +12,11 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/a9fb3f1c4eabacf46a8f5d5e92676fa1009fe117/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3c433e48557e476290f45fb6cb568d1a103c9978">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2847de83d7ee4e379af24e16156ea7dc13372068/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/d62386cc509fa0c0fa21b78ea136e26af44326b8/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1f4bb2577a30d0b3268fed038ed59230709ad593">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8ff0dcde76b3f4978415f1e3e80eef4dab7611da/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-applinks-1.4.0_55337941b6ccdddbc3835cb953cf7e82097220ce/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/751e005238575f7fac1918df816e4a7110f682ec/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8ac09931704b91e7b4d281f5e34b3b006b628c22">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eb8e9b478fd5f4a36b76ef71a075b87e0e228d3f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/f7dac40a668c40f2cdb8d29f2895094f03e537cf/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="51518e8e8f97c314a243d9def0ded91d385b6a1e">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f3ad812f56f444659917672052d70cadd669d746/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/bolts-tasks-1.4.0_4586e4e168dd163995e7e1424ce237e407989875/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/92ad6df539b68da3ea45546dd96172fa3592946b/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0ef21408e3142ffbfbd4a7ec1762c3325c6c386c">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3aa7f7efd93e39693b00b9a7532fbebf95bb594e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/fb214f20924929fa40730c7801b6a84609dcf170/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="16226703bab55ec42457666213cd3503799d36a8">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_965202e71aee3998f73d5709ecdd67fb61d1bd70/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/346130c78493a96fb3104ae5066722f1a1d2943a/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="42a3ae86dd3ae2876d3e95c2e6e104ae57a50a65">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_15902b2b265e837995d5d422a727e7203f3aa3f3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/9f9e89b22c2fbe331f0d3b8f61af5719fb307e9a/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ebf985be182798e6322fee8fe437b14ee6bb8609">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ccdce82a5dfdc02fa10e8fa5ca46739ad64a2d84/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.android/build-cache/6a90dd035a0706c97b67cc4aef3678823642e20a/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2d1eaa9e0b98f8fc4c2b989d9b30d4f1480648ac">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_48b6ddc5477d2aa1f4e9e44840da6a8b57541871/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/gersoft/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_cbed601d15919176ad84298c15850636ad57654c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="41ae5ab74022267a72a70b0ccde7f5235f34d67f">
+        sha1="aab2017d3264c546f8c9d5a51372725044a4bb47">
         <dex dex="/Users/gersoft/Documents/Sergi/CrowdbuyAS/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_38fb457a742d934d24282143311695d8b98306e5/classes.dex" />
     </item>
 

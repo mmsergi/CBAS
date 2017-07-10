@@ -1,6 +1,7 @@
 package sergi.crowdbuy;
 
 import android.content.Intent;
+import android.media.audiofx.BassBoost;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_signout) {
             FirebaseAuth.getInstance().signOut();
 
             Toast.makeText(this, "Signed out!", Toast.LENGTH_SHORT).show();
@@ -148,6 +149,9 @@ public class MainActivity extends AppCompatActivity
             fragmentClass = MyOffersFragment.class;
         } else if (id == R.id.nav_send) {
             fragmentClass = MyOffersFragment.class;
+            Intent i = new Intent(this, SettingsActivity.class);
+            startActivity(i);
+            return true;
         }
 
         try {
