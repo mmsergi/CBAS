@@ -35,7 +35,7 @@ import butterknife.ButterKnife;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, OffersFragment.OnFragmentInteractionListener,
+        implements NavigationView.OnNavigationItemSelectedListener, OffersFragment2.OnFragmentInteractionListener,
         MyOffersFragment.OnFragmentInteractionListener, MyChatsFragment.OnFragmentInteractionListener{
 
     final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity
         if (savedInstanceState == null) {
             Fragment fragment = null;
             Class fragmentClass = null;
-            fragmentClass = OffersFragment.class;
+            fragmentClass = OffersFragment2.class;
             try {
                 fragment = (Fragment) fragmentClass.newInstance();
             } catch (Exception e) {
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             setTitle("Crowd Offers");
-            fragmentClass = OffersFragment.class;
+            fragmentClass = OffersFragment2.class;
         } else if (id == R.id.nav_gallery) {
             setTitle("My Offers");
             fragmentClass = MyOffersFragment.class;
