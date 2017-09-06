@@ -5,7 +5,6 @@ package sergi.crowdbuy;
  */
 
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,7 +13,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -26,6 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import sergi.crowdbuy.adapters.GridOffersAdapter;
 import sergi.crowdbuy.adapters.GridRecyclerViewAdapter;
@@ -44,7 +43,10 @@ public class OffersFragment2 extends Fragment {
 
     GridView gridView;
     GridOffersAdapter gridViewAdapter;
-    ArrayList<Offer> offersList;
+    RecyclerView recyclerView;
+
+    GridRecyclerViewAdapter gridAdapter;
+    ArrayList<GridObjects> gaggeredList;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -95,22 +97,9 @@ public class OffersFragment2 extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_offers_2, container, false);
 
-        offersList = new ArrayList<>();
+        gaggeredList = new ArrayList<>();
 
-        /*gridView = (GridView) view.findViewById(R.id.gridView);
-        gridViewAdapter = new GridOffersAdapter(getActivity(), offersList);
-
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-
-                Intent intent = new Intent(getActivity(), OfferActivity.class);
-                intent.putExtra("Offer", offersList.get(position));
-                startActivity(intent);
-            }
-        });
-
-                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("offers");
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("offers");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -122,27 +111,25 @@ public class OffersFragment2 extends Fragment {
                 //Toast.makeText(getActivity(), "databaseError: " + databaseError, Toast.LENGTH_SHORT).show();
 
             }
-        });*/
+        });
 
-        RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
 
         StaggeredGridLayoutManager gaggeredGridLayoutManager = new StaggeredGridLayoutManager(3, 1);
         recyclerView.setLayoutManager(gaggeredGridLayoutManager);
 
-        List<GridObjects> gaggeredList = getListItemData();
+        gaggeredList = getListItemData();
 
-        GridRecyclerViewAdapter rcAdapter = new GridRecyclerViewAdapter(getActivity(), gaggeredList);
-        recyclerView.setAdapter(rcAdapter);
-
-
-
+        gridAdapter = new GridRecyclerViewAdapter(getActivity(), gaggeredList);
+        recyclerView.setAdapter(gridAdapter);
 
         return view;
     }
 
-    private List<GridObjects> getListItemData(){
-        List<GridObjects> listViewItems = new ArrayList<GridObjects>();
+    private ArrayList<GridObjects> getListItemData(){
+        ArrayList<GridObjects> listViewItems = new ArrayList<>();
+
         listViewItems.add(new GridObjects("Alkane", R.drawable.one));
         listViewItems.add(new GridObjects("Ethane", R.drawable.two));
         listViewItems.add(new GridObjects("Alkyne", R.drawable.three));
@@ -161,7 +148,7 @@ public class OffersFragment2 extends Fragment {
 
     private void collectInfoFromDatabase(Map<String,Object> users) {
 
-        offersList.clear();
+        //gaggeredList.clear();
 
         if (users!=null){
 
@@ -179,15 +166,22 @@ public class OffersFragment2 extends Fragment {
                 String price = (String) singleEntry.get("price");
                 String currency = (String) singleEntry.get("currency");
 
-                Offer offer;
-                offer = new Offer(title, description, people, price, currency, key);
+                GridObjects offer = new GridObjects();
 
-                offersList.add(offer);
+                Random r = new Random();
+                int a = r.nextInt(4) + 1;
+
+                if (a == 1) offer = new GridObjects(title, R.drawable.one);
+                if (a == 2) offer = new GridObjects(title, R.drawable.two);
+                if (a == 3) offer = new GridObjects(title, R.drawable.three);
+                if (a == 4) offer = new GridObjects(title, R.drawable.four);
+
+                gaggeredList.add(offer);
             }
 
-            if (!(offersList.size() == 0)) {
-                gridViewAdapter.notifyDataSetChanged();
-                gridView.setAdapter(gridViewAdapter);
+            if (!(gaggeredList.size() == 0)) {
+                //gridAdapter.notifyItemRangeChanged(0, gridAdapter.getItemCount());
+                gridAdapter.notifyDataSetChanged();
             }
         }
     }

@@ -9,6 +9,10 @@ public class GridObjects {
     private String name;
     private int photo;
 
+    public GridObjects(){
+
+    }
+
     public GridObjects(String name, int photo) {
         this.name = name;
         this.photo = photo;
