@@ -119,7 +119,7 @@ public class OffersFragment2 extends Fragment {
         StaggeredGridLayoutManager gaggeredGridLayoutManager = new StaggeredGridLayoutManager(3, 1);
         recyclerView.setLayoutManager(gaggeredGridLayoutManager);
 
-        gaggeredList = getListItemData();
+        //gaggeredList = getListItemData();
 
         gridAdapter = new GridRecyclerViewAdapter(getActivity(), gaggeredList);
         recyclerView.setAdapter(gridAdapter);
@@ -180,7 +180,7 @@ public class OffersFragment2 extends Fragment {
             }
 
             if (!(gaggeredList.size() == 0)) {
-                //gridAdapter.notifyItemRangeChanged(0, gridAdapter.getItemCount());
+                gridAdapter.notifyItemRangeChanged(0, gridAdapter.getItemCount());
                 gridAdapter.notifyDataSetChanged();
             }
         }

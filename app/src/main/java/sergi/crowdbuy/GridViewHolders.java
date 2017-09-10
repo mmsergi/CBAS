@@ -18,8 +18,8 @@ public class GridViewHolders extends RecyclerView.ViewHolder implements View.OnC
     public GridViewHolders(View itemView) {
         super(itemView);
         itemView.setOnClickListener(this);
-        countryName = (TextView) itemView.findViewById(R.id.country_name);
-        countryPhoto = (ImageView) itemView.findViewById(R.id.country_photo);
+        countryName = (TextView) itemView.findViewById(R.id.title);
+        countryPhoto = (ImageView) itemView.findViewById(R.id.photo);
     }
 
     @Override

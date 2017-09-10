@@ -14,25 +14,26 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/country_photo"
+            android:id="@+id/photo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/action_settings"
             android:scaleType="centerCrop" />
 
         <TextView
-            android:id="@+id/country_name"
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:text="Hola"
-            android:textColor="#ffffff"
-            android:layout_below="@+id/country_photo"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/photo"
+            android:background="@color/colorPrimary"
+            android:gravity="center_horizontal"
             android:paddingBottom="8dp"
             android:paddingTop="8dp"
-            android:gravity="center_horizontal"
-            android:layout_alignParentBottom="true"
-            android:background="#1976D2"/>
+            android:text="Hola"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
