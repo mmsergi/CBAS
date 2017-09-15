@@ -113,6 +113,7 @@ public class NewOfferActivity extends AppCompatActivity {
         switch (v.getId()){
             case R.id.sendBtn:
                 uploadNewOffer();
+                finish();
             case R.id.closeBtn:
                 finish();
         }
@@ -126,8 +127,8 @@ public class NewOfferActivity extends AppCompatActivity {
         EditText participantsET = (EditText) findViewById(R.id.editTextParticipants);
         EditText priceET = (EditText) findViewById(R.id.editTextPrice);
 
+        // 1. CREATE OFFER IN DATABASE
         DatabaseReference ref = database.getReference("offers").push();
-
 
         ref.child("title").setValue(titleET.getText().toString());
         ref.child("description").setValue(descriptionET.getText().toString());
@@ -139,6 +140,7 @@ public class NewOfferActivity extends AppCompatActivity {
         GeoFire geoFire = new GeoFire(ref);
         geoFire.setLocation("geo", new GeoLocation(37.7853889, -122.4056973));
 
+        // 2. CREATE CHAT GROUP
         DatabaseReference ref2 = database.getReference("groups").child(ref.getKey());
 
         ref2.child("members").child(Crowdbuy.email.replace(".","")).setValue(true);

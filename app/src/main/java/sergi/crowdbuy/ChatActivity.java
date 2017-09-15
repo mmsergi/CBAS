@@ -3,33 +3,28 @@ package sergi.crowdbuy;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-import sergi.crowdbuy.adapters.ChatListAdapter;
-import sergi.crowdbuy.adapters.ListMyOffersAdapter;
+import sergi.crowdbuy.adapters.ListMessageListAdapter;
 import sergi.crowdbuy.objects.ChatMessage;
-import sergi.crowdbuy.objects.Offer;
 
 public class ChatActivity extends AppCompatActivity {
 
     ListView listView;
-    ChatListAdapter listViewAdapter;
+    ListMessageListAdapter listViewAdapter;
 
     ArrayList<ChatMessage> chatList = new ArrayList<>();
 
@@ -39,7 +34,7 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         listView = (ListView) findViewById(R.id.list_of_messages);
-        listViewAdapter = new ChatListAdapter(this, chatList);
+        listViewAdapter = new ListMessageListAdapter(this, chatList);
 
         FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
 

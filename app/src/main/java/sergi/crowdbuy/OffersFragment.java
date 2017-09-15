@@ -146,7 +146,7 @@ public class OffersFragment extends Fragment {
                 String currency = (String) singleEntry.get("currency");
 
                 Offer offer;
-                offer = new Offer(title, description, people, price, currency, key);
+                offer = new Offer(title, description, people, price, currency, key, 0);
 
                 offersList.add(offer);
             }

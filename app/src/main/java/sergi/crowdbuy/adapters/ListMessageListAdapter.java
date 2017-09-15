@@ -14,12 +14,12 @@ import java.util.ArrayList;
 import sergi.crowdbuy.R;
 import sergi.crowdbuy.objects.ChatMessage;
 
-public class ChatListAdapter extends ArrayAdapter<ChatMessage> {
+public class ListMessageListAdapter extends ArrayAdapter<ChatMessage> {
 
     private Context context;
     private ArrayList<ChatMessage> arrayMessages;
 
-    public ChatListAdapter(Context context, ArrayList<ChatMessage> arrayMessages) {
+    public ListMessageListAdapter(Context context, ArrayList<ChatMessage> arrayMessages) {
         super(context, R.layout.activity_main);
         this.context = context;
         this.arrayMessages = arrayMessages;

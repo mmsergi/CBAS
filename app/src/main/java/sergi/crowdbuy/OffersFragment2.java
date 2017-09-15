@@ -13,7 +13,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,13 +21,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import sergi.crowdbuy.adapters.GridOffersAdapter;
 import sergi.crowdbuy.adapters.GridRecyclerViewAdapter;
-import sergi.crowdbuy.objects.GridObjects;
 import sergi.crowdbuy.objects.Offer;
 
 /**
@@ -41,12 +37,10 @@ import sergi.crowdbuy.objects.Offer;
  */
 public class OffersFragment2 extends Fragment {
 
-    GridView gridView;
-    GridOffersAdapter gridViewAdapter;
     RecyclerView recyclerView;
 
     GridRecyclerViewAdapter gridAdapter;
-    ArrayList<GridObjects> gaggeredList;
+    ArrayList<Offer> aListOffers;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -97,7 +91,7 @@ public class OffersFragment2 extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_offers_2, container, false);
 
-        gaggeredList = new ArrayList<>();
+        aListOffers = new ArrayList<>();
 
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("offers");
         ref.addValueEventListener(new ValueEventListener() {
@@ -116,39 +110,18 @@ public class OffersFragment2 extends Fragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
 
-        StaggeredGridLayoutManager gaggeredGridLayoutManager = new StaggeredGridLayoutManager(3, 1);
-        recyclerView.setLayoutManager(gaggeredGridLayoutManager);
+        StaggeredGridLayoutManager staaggeredGridLayoutManager = new StaggeredGridLayoutManager(3, 1);
+        recyclerView.setLayoutManager(staaggeredGridLayoutManager);
 
-        //gaggeredList = getListItemData();
-
-        gridAdapter = new GridRecyclerViewAdapter(getActivity(), gaggeredList);
+        gridAdapter = new GridRecyclerViewAdapter(getActivity(), aListOffers);
         recyclerView.setAdapter(gridAdapter);
 
         return view;
     }
 
-    private ArrayList<GridObjects> getListItemData(){
-        ArrayList<GridObjects> listViewItems = new ArrayList<>();
-
-        listViewItems.add(new GridObjects("Alkane", R.drawable.one));
-        listViewItems.add(new GridObjects("Ethane", R.drawable.two));
-        listViewItems.add(new GridObjects("Alkyne", R.drawable.three));
-        listViewItems.add(new GridObjects("Benzene", R.drawable.four));
-        listViewItems.add(new GridObjects("Amide", R.drawable.one));
-        listViewItems.add(new GridObjects("Amino Acid", R.drawable.two));
-        listViewItems.add(new GridObjects("Phenol", R.drawable.three));
-        listViewItems.add(new GridObjects("Carbonxylic", R.drawable.four));
-        listViewItems.add(new GridObjects("Nitril", R.drawable.one));
-        listViewItems.add(new GridObjects("Ether", R.drawable.two));
-        listViewItems.add(new GridObjects("Ester", R.drawable.three));
-        listViewItems.add(new GridObjects("Alcohol", R.drawable.four));
-
-        return listViewItems;
-    }
-
     private void collectInfoFromDatabase(Map<String,Object> users) {
 
-        //gaggeredList.clear();
+        aListOffers.clear();
 
         if (users!=null){
 
@@ -166,20 +139,20 @@ public class OffersFragment2 extends Fragment {
                 String price = (String) singleEntry.get("price");
                 String currency = (String) singleEntry.get("currency");
 
-                GridObjects offer = new GridObjects();
+                Offer offer = new Offer();
 
                 Random r = new Random();
                 int a = r.nextInt(4) + 1;
 
-                if (a == 1) offer = new GridObjects(title, R.drawable.one);
-                if (a == 2) offer = new GridObjects(title, R.drawable.two);
-                if (a == 3) offer = new GridObjects(title, R.drawable.three);
-                if (a == 4) offer = new GridObjects(title, R.drawable.four);
+                if (a == 1) offer = new Offer(title, description, people, price, currency, key, R.drawable.one);
+                if (a == 2) offer = new Offer(title, description, people, price, currency, key, R.drawable.two);
+                if (a == 3) offer = new Offer(title, description, people, price, currency, key, R.drawable.three);
+                if (a == 4) offer = new Offer(title, description, people, price, currency, key, R.drawable.four);
 
-                gaggeredList.add(offer);
+                aListOffers.add(offer);
             }
 
-            if (!(gaggeredList.size() == 0)) {
+            if (!(aListOffers.size() == 0)) {
                 gridAdapter.notifyItemRangeChanged(0, gridAdapter.getItemCount());
                 gridAdapter.notifyDataSetChanged();
             }

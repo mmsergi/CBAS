@@ -133,7 +133,7 @@ public class MyOffersFragment extends Fragment {
 
                     Log.e("TEST", key);
 
-                    Offer offer = new Offer(title, description, participants, price, currency, key);
+                    Offer offer = new Offer(title, description, participants, price, currency, key, 0);
                     myOffersList.add(offer);
                 }
 
