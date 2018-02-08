@@ -103,10 +103,7 @@ public class NewOfferActivity extends AppCompatActivity {
             } else if (locationManager.getAllProviders().contains("gps")) {
                 locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
             }
-
-            return;
         }
-
     }
 
     public void onClick(View v ){

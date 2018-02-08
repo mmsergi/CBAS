@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.audiofx.BassBoost;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -50,10 +51,12 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         final List<String> permissionsList = new ArrayList<>();
-        permissionsList.add(android.Manifest.permission.ACCESS_FINE_LOCATION);
+        permissionsList.add(Manifest.permission.ACCESS_FINE_LOCATION);
         permissionsList.add(Manifest.permission.ACCESS_COARSE_LOCATION);
 
-        requestPermissions(permissionsList.toArray(new String[permissionsList.size()]), REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(permissionsList.toArray(new String[permissionsList.size()]), REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);
+        }
 
         setTitle("Crowd Offers");
 
